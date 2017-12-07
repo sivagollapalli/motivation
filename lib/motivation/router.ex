@@ -20,7 +20,7 @@ defmodule Motivation.Router do
               "Why should you continue going after your dreams? Because seeing the look on the faces of the people who said you couldn’t will be priceless.",
     "Never give up, for that is just the place and time that the tide will turn."]
 
-    message = %{"response_type" => "in_channel", "text" => Enum.random(quotes) }
+    message = %{"response_type" => "ror", "text" => Enum.random(quotes) }
              |> Poison.encode!([])
 
     send_resp(conn, 200, message)
